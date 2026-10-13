@@ -1,14 +1,31 @@
-import Image from "next/image";
-import { ShoppingCart, BookSearch } from "lucide-react";
-import Link from "next/link";
+"use client";
 
+import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { ShoppingCart } from "lucide-react";
 
 export default function Navbar() {
+  const pathname = usePathname();
   const logo =
     "https://lh3.googleusercontent.com/aida-public/AB6AXuC9UUokMTzxSsu8O1zd_avOuUmAbckbME79VRQKX-QUfF4g_fUDLL230Vlq3C2jCD1Zenvx4KyMxMB90HqdtyRD4spq0pOzr71xpXMXJStHrmLuVMXIKhFA7h7mYTgRxBGCQfjGuH6xCKrvX8Uucd2YKfwlDMDIyGtTwnveLdXO6Rf41YP44E8rpSx1oJO5xVYlzbWqfjvhEHgE9vjPbsR1HNAiFml67z9Y_tcSfPy6SmfOYwDDFPf8GA";
 
   const curator =
     "https://lh3.googleusercontent.com/aida-public/AB6AXuD0Iyli8fmmzY9doU-BiRxk8P1y08AfJNsKPC1s77WX16_j9ZK6L3Lt5rL2fPyda_d6_IAEvHQ-sZCfGvWULuULYlgXFNuCW6H_KS_h6eq_knBn3igC13vOfTw0qDDo8oB5ZwdC3D7dHwDywngmifQbwVjbk9v9xIUc2FopYAeOCs9ozSLlaYCKGa_VeYup6yvbHKSqbkqO8gPgB2mvkNbYN_Ac66OGIcdW37CD6pJxi4R7ATHDsMvA2A";
+
+  const isActive = (href: string) => pathname === href;
+
+  const activeClasses =
+    "rounded-full bg-secondary-container px-3.5 py-2 font-semibold text-on-secondary-container";
+
+  const inactiveClasses =
+    "rounded-full px-3.5 py-2 text-label-md text-on-surface-variant transition-colors hover:bg-surface-container-low hover:text-on-surface";
+
+  const navItems = [
+    { label: "Home", href: "/" },
+    { label: "Store", href: "/store" },
+    { label: "My Account", href: "/account" },
+  ];
   return (
     <header className="fixed top-0 z-50 w-full shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
       {/* <div className="flex items-center justify-center gap-2 bg-tertiary-fixed px-4 py-2 text-center text-label-sm text-on-tertiary-fixed">
@@ -42,37 +59,20 @@ export default function Navbar() {
             aria-label="Main navigation"
             className="hidden items-center gap-1 xl:flex"
           >
-            <Link
-              href="/"
-              aria-current="page"
-              className="rounded-full bg-secondary-container px-3.5 py-2 font-semibold text-on-secondary-container"
-            >
-              Home
-            </Link>
-            <Link
-              href="/store"
-              className="rounded-full px-3.5 py-2 text-label-md text-on-surface-variant transition-colors hover:bg-surface-container-low hover:text-on-surface"
-            >
-              Store
-            </Link>
-            <Link
-              href="#featured"
-              className="rounded-full px-3.5 py-2 text-label-md text-on-surface-variant transition-colors hover:bg-surface-container-low hover:text-on-surface"
-            >
-              My Account
-            </Link>
-            {/* <Link
-              href="#categories"
-              className="rounded-full px-3.5 py-2 text-label-md text-on-surface-variant transition-colors hover:bg-surface-container-low hover:text-on-surface"
-            >
-              Categories
-            </Link>
-            <Link
-              href="#spotlight"
-              className="rounded-full px-3.5 py-2 text-label-md text-on-surface-variant transition-colors hover:bg-surface-container-low hover:text-on-surface"
-            >
-              Staff Picks
-            </Link> */}
+            {navItems.map((item) => {
+              const active = isActive(item.href);
+
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  aria-current={active ? "page" : undefined}
+                  className={active ? activeClasses : inactiveClasses}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
           </nav>
           <div className="flex shrink-0 items-center gap-2">
             <Link

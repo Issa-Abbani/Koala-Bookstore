@@ -13,6 +13,7 @@ import {
   Wallpaper,
   ShoppingCartPlus
 } from "lucide-react";
+import Link from "next/link";
 
 const heroBooks = [
   {
@@ -175,12 +176,12 @@ export default function Home() {
                 and care.
               </p>
               <div className="flex flex-wrap items-center gap-4 pt-2">
-                <a
-                  href="#featured"
+                <Link
+                  href="/store"
                   className="inline-flex items-center gap-2 rounded-xl bg-primary-container px-7 py-3.5 font-title-sm text-surface-container-lowest shadow-md transition hover:brightness-105"
                 >
                   Explore Catalog <ArrowRightFromLine color="#ffffff" />
-                </a>
+                </Link>
               </div>
               {/* <div className="flex items-center gap-4 pt-4 text-on-surface-variant">
                 <div className="flex -space-x-2">
