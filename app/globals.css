@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: #006591;
+  --color-primary-container: #55b8f5;
+  --color-primary-fixed: #c9e6ff;
+  --color-on-primary: #ffffff;
+  --color-on-primary-fixed: #001e2f;
+  --color-on-primary-container: #004767;
+  --color-secondary: #466080;
+  --color-secondary-container: #bfd9fe;
+  --color-secondary-fixed: #d2e4ff;
+  --color-on-secondary-container: #455f7e;
+  --color-on-secondary-fixed: #001d37;
+  --color-on-tertiary-container: #573d27;
+  --color-tertiary: #765841;
+  --color-tertiary-container: #cda88c;
+  --color-tertiary-fixed: #ffdcc3;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-fixed: #2b1705;
+  --color-surface: #f8f9ff;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #eff4ff;
+  --color-surface-container: #e5eeff;
+  --color-surface-container-high: #dce9ff;
+  --color-surface-container-highest: #d3e4fe;
+  --color-on-surface: #0b1c30;
+  --color-on-surface-variant: #3f484f;
+  --color-outline: #6f7881;
+  --color-outline-variant: #bec8d1;
+  --color-error: #ba1a1a;
+  --font-display: "Plus Jakarta Sans", sans-serif;
+  --font-title-sm: "Plus Jakarta Sans", sans-serif;
+  --font-title-md: "Plus Jakarta Sans", sans-serif;
+  --font-body-sm: Inter, sans-serif;
+  --font-body-md: Inter, sans-serif;
+  --font-body-lg: Inter, sans-serif;
+  --font-label-sm: "Plus Jakarta Sans", sans-serif;
+  --font-label-md: "Plus Jakarta Sans", sans-serif;
+  --text-display: 48px;
+  --text-headline-lg: 36px;
+  --text-headline-md: 24px;
+  --text-headline-sm: 20px;
+  --text-title-md: 18px;
+  --text-title-sm: 16px;
+  --text-body-lg: 18px;
+  --text-body-md: 15px;
+  --text-body-sm: 13px;
+  --text-label-md: 14px;
+  --text-label-sm: 12px;
+  --text-caption: 11px;
+}
+
+.material-symbols-outlined {
+  font-family: "Material Symbols Outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1em;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: #f8f9ff;
+  color: #0b1c30;
+  font-family: Inter, sans-serif;
+}
