@@ -4,8 +4,6 @@ import { useState, type FormEvent } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const logo =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuC9UUokMTzxSsu8O1zd_avOuUmAbckbME79VRQKX-QUfF4g_fUDLL230Vlq3C2jCD1Zenvx4KyMxMB90HqdtyRD4spq0pOzr71xpXMXJStHrmLuVMXIKhFA7h7mYTgRxBGCQfjGuH6xCKrvX8Uucd2YKfwlDMDIyGtTwnveLdXO6Rf41YP44E8rpSx1oJO5xVYlzbWqfjvhEHgE9vjPbsR1HNAiFml67z9Y_tcSfPy6SmfOYwDDFPf8GA";
 
 const perks = [
   {
@@ -58,64 +56,10 @@ export default function SignInPage() {
 
   return (
     <div className="min-h-screen bg-surface text-on-surface">
-      <header className="fixed top-0 z-50 w-full shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
-        <div className="flex items-center justify-center gap-2 bg-tertiary-fixed px-4 py-2 text-center text-label-sm text-on-tertiary-fixed">
-          <Icon className="text-sm">spa</Icon>
-          <span>
-            Free shipping on orders over $35 | Use code <strong>KOALALOVE</strong> for
-            10% off your first read
-          </span>
-        </div>
-        <div className="bg-surface-container-lowest/95 backdrop-blur-xl">
-          <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-6 px-5 lg:px-12">
-            <Link href="/" className="flex shrink-0 items-center gap-3">
-              <Image src={logo} alt="" width={120} height={32} style={{ width: "auto" }} className="h-8 w-auto object-contain" />
-              <span className="flex flex-col">
-                <span className="font-title-md text-title-md leading-tight tracking-tight">
-                  Koala Bookstore
-                </span>
-                <span className="text-caption text-on-surface-variant">
-                  Your cozy reading nook
-                </span>
-              </span>
-            </Link>
-            <nav aria-label="Main navigation" className="hidden items-center gap-1 xl:flex">
-              <Link href="/" className="rounded-full px-3.5 py-2 text-label-md text-on-surface-variant transition-colors hover:bg-surface-container-low hover:text-on-surface">Home</Link>
-              <Link href="/#featured" className="rounded-full px-3.5 py-2 text-label-md text-on-surface-variant transition-colors hover:bg-surface-container-low hover:text-on-surface">Catalog / Store</Link>
-              <Link href="/#featured" className="rounded-full px-3.5 py-2 text-label-md text-on-surface-variant transition-colors hover:bg-surface-container-low hover:text-on-surface">Bestsellers</Link>
-              <Link href="/#categories" className="rounded-full px-3.5 py-2 text-label-md text-on-surface-variant transition-colors hover:bg-surface-container-low hover:text-on-surface">Categories</Link>
-              <Link href="/#spotlight" className="rounded-full px-3.5 py-2 text-label-md text-on-surface-variant transition-colors hover:bg-surface-container-low hover:text-on-surface">Staff Picks</Link>
-            </nav>
-            <label className="relative hidden max-w-sm flex-1 items-center sm:flex">
-              <Icon className="pointer-events-none absolute left-3.5 text-lg text-outline">search</Icon>
-              <input
-                aria-label="Search books"
-                className="h-11 w-full rounded-full bg-surface-container-low pl-10 pr-4 text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary-container"
-                placeholder="Search by title, author, ISBN..."
-                type="search"
-              />
-            </label>
-            <div className="flex shrink-0 items-center gap-2">
-              <Link href="/#featured" aria-label="Wishlist" className="relative rounded-full p-2.5 text-on-surface-variant transition-colors hover:bg-surface-container-low hover:text-on-surface">
-                <Icon className="text-xl">favorite</Icon>
-                <span className="absolute right-1 top-1 flex h-4 w-4 items-center justify-center rounded-full bg-tertiary text-caption text-on-tertiary">2</span>
-              </Link>
-              <Link href="/#featured" aria-label="Shopping cart" className="relative rounded-full p-2.5 text-on-surface-variant transition-colors hover:bg-surface-container-low hover:text-on-surface">
-                <Icon className="text-xl">shopping_bag</Icon>
-                <span className="absolute right-1 top-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-caption text-on-primary">3</span>
-              </Link>
-              <Link href="/signin" aria-label="Sign in" aria-current="page" className="flex h-9 w-9 items-center justify-center rounded-full bg-secondary-container text-on-secondary-container">
-                <Icon className="text-xl">person</Icon>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </header>
-
       <main className="w-full bg-surface pt-28">
         <div className="relative mx-auto w-full max-w-7xl overflow-hidden px-5 py-12 md:py-20 lg:px-12 lg:py-24">
           <div className="pointer-events-none absolute -left-20 -top-32 -z-10 h-96 w-96 rounded-full bg-secondary-container/40 blur-3xl" />
-          <div className="pointer-events-none absolute bottom-10 right-0 -z-10 h-[30rem] w-[30rem] rounded-full bg-tertiary-fixed/30 blur-3xl" />
+          <div className="pointer-events-none absolute bottom-10 right-0 -z-10 h-120 w-120 rounded-full bg-tertiary-fixed/30 blur-3xl" />
 
           <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
             <section className="order-2 flex flex-col space-y-8 lg:order-1 lg:col-span-5">
@@ -124,7 +68,7 @@ export default function SignInPage() {
                 Curated Haven Member Log
               </div>
               <div className="space-y-4">
-                <h1 className="font-display text-[34px] leading-[42px] tracking-tight sm:text-display">
+                <h1 className="font-display text-[34px] leading-10.5 tracking-tight sm:text-display">
                   Step back inside your quiet corner.
                 </h1>
                 <p className="text-body-lg leading-relaxed text-on-surface-variant">
@@ -325,69 +269,6 @@ export default function SignInPage() {
           </div>
         </div>
       </main>
-
-      <footer className="w-full bg-surface-container-low py-16 text-on-surface shadow-[0_-1px_8px_rgba(0,0,0,0.02)]">
-        <div className="mx-auto max-w-7xl px-5 lg:px-12">
-          <div className="grid gap-10 border-b border-outline-variant/30 pb-12 md:grid-cols-2 lg:grid-cols-5">
-            <div className="space-y-4 lg:col-span-2">
-              <Link href="/" className="flex items-center gap-3">
-                <Image src={logo} alt="" width={120} height={32} style={{ width: "auto" }} className="h-8 w-auto object-contain" />
-                <span className="font-title-md text-title-md font-bold tracking-tight">Koala Bookstore</span>
-              </Link>
-              <p className="max-w-sm text-body-md leading-relaxed text-on-surface-variant">
-                Your independent neighborhood sanctuary for curated literature,
-                heartfelt recommendations, and peaceful bookish conversations.
-              </p>
-              <div className="flex items-center gap-3 pt-2">
-                <Link aria-label="Bookmarks" href="/#featured" className="flex h-9 w-9 items-center justify-center rounded-full bg-surface-container text-on-surface-variant transition-colors hover:bg-surface-container-high hover:text-primary"><Icon className="text-lg">bookmark</Icon></Link>
-                <Link aria-label="Reviews" href="/#spotlight" className="flex h-9 w-9 items-center justify-center rounded-full bg-surface-container text-on-surface-variant transition-colors hover:bg-surface-container-high hover:text-primary"><Icon className="text-lg">rate_review</Icon></Link>
-                <Link aria-label="Store location" href="/#top" className="flex h-9 w-9 items-center justify-center rounded-full bg-surface-container text-on-surface-variant transition-colors hover:bg-surface-container-high hover:text-primary"><Icon className="text-lg">storefront</Icon></Link>
-              </div>
-            </div>
-            <div>
-              <h2 className="font-title-sm text-title-sm">Explore &amp; Shop</h2>
-              <ul className="mt-4 space-y-3 text-body-sm text-on-surface-variant">
-                <li><Link href="/#categories" className="hover:text-primary">Fiction</Link></li>
-                <li><Link href="/#categories" className="hover:text-primary">Non-fiction</Link></li>
-                <li><Link href="/#featured" className="hover:text-primary">New Arrivals</Link></li>
-                <li><Link href="/#spotlight" className="hover:text-primary">Rare &amp; Indie</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h2 className="font-title-sm text-title-sm">Customer Support</h2>
-              <ul className="mt-4 space-y-3 text-body-sm text-on-surface-variant">
-                <li><a href="mailto:haven@koalabooks.com" className="hover:text-primary">Order Tracking</a></li>
-                <li><a href="mailto:haven@koalabooks.com" className="hover:text-primary">Delivery Info</a></li>
-                <li><a href="mailto:haven@koalabooks.com" className="hover:text-primary">Returns &amp; FAQ</a></li>
-                <li><a href="mailto:haven@koalabooks.com" className="hover:text-primary">Contact</a></li>
-              </ul>
-            </div>
-            <div>
-              <h2 className="font-title-sm text-title-sm">Community &amp; Perks</h2>
-              <ul className="mt-4 space-y-3 text-body-sm text-on-surface-variant">
-                <li><Link href="/#newsletter" className="hover:text-primary">Book Club</Link></li>
-                <li><Link href="/#newsletter" className="hover:text-primary">Koala Rewards</Link></li>
-                <li><Link href="/#spotlight" className="hover:text-primary">Our Story</Link></li>
-                <li><Link href="/#newsletter" className="hover:text-primary">Reading Events</Link></li>
-              </ul>
-            </div>
-          </div>
-          <div className="my-12 flex flex-col items-center justify-between gap-6 rounded-2xl bg-surface-container p-6 text-center md:flex-row md:text-left">
-            <div className="space-y-1">
-              <h2 className="font-title-md text-title-md">Join the Reading Haven</h2>
-              <p className="text-body-sm text-on-surface-variant">
-                Receive weekly author conversations, literary dispatches, and member-only quiet hours.
-              </p>
-            </div>
-            <Link href="/#newsletter" className="shrink-0 rounded-xl bg-primary px-6 py-3 font-label-md text-on-primary transition-colors hover:bg-primary/90">
-              Join the newsletter
-            </Link>
-          </div>
-          <p className="border-t border-outline-variant/30 pt-8 text-center text-caption text-on-surface-variant">
-            © 2025 Koala Bookstore Inc. All rights reserved. Made with love for fellow bookworms.
-          </p>
-        </div>
-      </footer>
     </div>
   );
 }

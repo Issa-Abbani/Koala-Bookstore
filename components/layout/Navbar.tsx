@@ -37,7 +37,7 @@ export default function Navbar() {
             </div> */}
       <div className="bg-surface-container-lowest/95 backdrop-blur-xl">
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-6 px-5 lg:px-12">
-          <a href="#top" className="flex shrink-0 items-center gap-3">
+          <Link href="/" className="flex shrink-0 items-center gap-3">
             <Image
               src={logo}
               alt=""
@@ -54,7 +54,7 @@ export default function Navbar() {
                 Your cozy reading nook
               </span>
             </span>
-          </a>
+          </Link>
           <nav
             aria-label="Main navigation"
             className="hidden items-center gap-1 xl:flex"
