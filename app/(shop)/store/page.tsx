@@ -2,7 +2,6 @@
 
 import { Funnel, Grid3X3, List, Search, ShoppingCartPlus } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import { useMemo, useState, type FormEvent } from "react";
 
 type Book = {
@@ -19,8 +18,6 @@ type Book = {
   image: string;
 };
 
-const logo =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuC9UUokMTzxSsu8O1zd_avOuUmAbckbME79VRQKX-QUfF4g_fUDLL230Vlq3C2jCD1Zenvx4KyMxMB90HqdtyRD4spq0pOzr71xpXMXJStHrmLuVMXIKhFA7h7mYTgRxBGCQfjGuH6xCKrvX8Uucd2YKfwlDMDIyGtTwnveLdXO6Rf41YP44E8rpSx1oJO5xVYlzbWqfjvhEHgE9vjPbsR1HNAiFml67z9Y_tcSfPy6SmfOYwDDFPf8GA";
 
 const books: Book[] = [
   {
@@ -148,14 +145,6 @@ const categories = [
   "Young Adult",
 ];
 const formats = ["Paperback", "Hardcover", "Audiobook edition"];
-const quickTags = [
-  "All Formats",
-  "Hardcover",
-  "Paperback",
-  "Signed Copies",
-  "Bestsellers",
-  "Under $20",
-];
 
 function Icon({
   children,
@@ -319,7 +308,7 @@ export default function StorePage() {
                     onChange={(event) => setSearch(event.target.value)}
                     id="catalog-search"
                     className="h-12 w-full rounded-xl bg-surface-container-low pl-12 pr-12 text-body-sm placeholder:text-outline focus:bg-surface-container focus:outline-none"
-                    placeholder="Search by title, author, keyword, or ISBN..."
+                    placeholder="Search for your next read!"
                     type="search"
                   />
                   {search && (
@@ -385,7 +374,7 @@ export default function StorePage() {
                     Categories &amp; Genres
                   </legend>
                   <div className="space-y-2 pt-1">
-                    {categories.map((category, index) => (
+                    {categories.map((category) => (
                       <label
                         key={category}
                         className="group flex cursor-pointer items-center justify-between"

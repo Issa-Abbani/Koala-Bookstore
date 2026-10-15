@@ -4,8 +4,17 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { ShoppingCart } from "lucide-react";
+import { Suspense } from "react";
 
-export default function Navbar() {
+export default function Navbar(){
+  return(
+    <Suspense fallback={"Loading..."}>
+      <NavbarHTML />
+    </Suspense>
+  )
+}
+
+export function NavbarHTML() {
   const pathname = usePathname();
   const logo =
     "https://lh3.googleusercontent.com/aida-public/AB6AXuC9UUokMTzxSsu8O1zd_avOuUmAbckbME79VRQKX-QUfF4g_fUDLL230Vlq3C2jCD1Zenvx4KyMxMB90HqdtyRD4spq0pOzr71xpXMXJStHrmLuVMXIKhFA7h7mYTgRxBGCQfjGuH6xCKrvX8Uucd2YKfwlDMDIyGtTwnveLdXO6Rf41YP44E8rpSx1oJO5xVYlzbWqfjvhEHgE9vjPbsR1HNAiFml67z9Y_tcSfPy6SmfOYwDDFPf8GA";
