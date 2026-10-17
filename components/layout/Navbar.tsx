@@ -33,7 +33,7 @@ export function NavbarHTML() {
   const navItems = [
     { label: "Home", href: "/" },
     { label: "Store", href: "/store" },
-    { label: "My Account", href: "/account" },
+    { label: "My Orders", href: "/orders" },
   ];
   return (
     <header className="fixed top-0 z-50 w-full shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
