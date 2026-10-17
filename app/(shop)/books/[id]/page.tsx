@@ -774,7 +774,7 @@ function BookDetailsContent() {
                   className="group flex flex-col justify-between rounded-2xl bg-surface-container-lowest p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                 >
                   <Link href={`/books/${book.id}`} className="block">
-                    <div className="relative mb-4 aspect-[2/3] w-full overflow-hidden rounded-xl bg-surface-container shadow-sm">
+                    <div className="relative mb-4 aspect-2/3 w-full overflow-hidden rounded-xl bg-surface-container shadow-sm">
                       <Image
                         src={book.image}
                         alt={`Cover of ${book.title}`}
